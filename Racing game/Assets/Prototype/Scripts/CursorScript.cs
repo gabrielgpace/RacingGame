@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class CursorScript : MonoBehaviour
 
 {
-    public Camera camera;
+    public Camera gameCamera;
     void Awake()
     {
         Cursor.visible = false;
@@ -13,7 +13,7 @@ public class CursorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePosition = gameCamera.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePosition;
     }
 }
